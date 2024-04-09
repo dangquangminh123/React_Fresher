@@ -22,7 +22,7 @@ const History = () => {
 
       const res = await historyOrder();
       if (res && res.data) {
-        console.log(res.data);
+        // console.log(res.data);
         setListOrder(res.data);
         setDetailOrder(res.data.detail);
       }
