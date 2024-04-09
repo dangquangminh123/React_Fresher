@@ -16,20 +16,20 @@ import { Divider, Row, Tag, Space, Table, Col } from 'antd';
 const History = () => {
   const [listOrder, setListOrder] = useState([]);
   const [detailOrder, setDetailOrder] = useState([]);
+  
   useEffect(() => {
-    fetchOrder();
-  }, [listOrder]);
+    const fetchOrder = async () => {
 
-
-  const fetchOrder = async () => {
-
-    const res = await historyOrder();
-    if (res && res.data) {
-      console.log(res.data);
-      setListOrder(res.data);
-      setDetailOrder(res.data.detail);
+      const res = await historyOrder();
+      if (res && res.data) {
+        console.log(res.data);
+        setListOrder(res.data);
+        setDetailOrder(res.data.detail);
+      }
     }
-  }
+    fetchOrder();
+  }, []);
+
   const columns = [
     {
       title: 'STT',
