@@ -18,7 +18,7 @@ const History = () => {
   const [detailOrder, setDetailOrder] = useState([]);
   useEffect(() => {
     fetchOrder();
-  }, []);
+  }, [listOrder]);
 
 
   const fetchOrder = async () => {
