@@ -218,6 +218,7 @@ const UserTable = () => {
     }
 
     const handleSearch = (query) => {
+        setCurrent(1);
         fetchuser(query);
     }
 
